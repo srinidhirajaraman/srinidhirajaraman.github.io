@@ -273,8 +273,13 @@ footer{padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-it
 
   <div id="hero">
     <div class="hero-inner">
-      <div class="hero-photo-wrap">
-        <img class="hero-photo" src="photo.jpg" alt="Srinidhi Rajaraman" onerror="this.style.display='none'"/>
+      <div class="hero-photo-wrap" style="position:relative;width:140px;height:140px">
+        <img id="hero-img" class="hero-photo" src="photo.jpg" alt="Srinidhi Rajaraman"
+          onerror="this.style.display='none';document.getElementById('photo-placeholder').style.display='flex'"/>
+        <div id="photo-placeholder" style="display:none;width:140px;height:140px;border-radius:50%;border:2px dashed var(--border);background:var(--bg2);flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--muted);font-size:0.75rem;font-weight:500;text-align:center">
+          <span style="font-size:2rem">🖼️</span>
+          Add photo.jpg<br/>to your repo
+        </div>
       </div>
       <div class="hero-text fade-in">
         <div class="hero-label">Health Informatics</div>
